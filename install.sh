@@ -15,6 +15,7 @@ packages=(
     fonts-jetbrains-mono
     gnome-themes-extra
     gnome-themes-extra-data
+    greetd
     lxappearance
     neovim
     numix-icon-theme-circle
