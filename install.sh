@@ -16,6 +16,7 @@ packages=(
     gnome-themes-extra
     gnome-themes-extra-data
     neovim
+    numix-icon-theme-circle
     pavucontrol
     pipewire
     powerline

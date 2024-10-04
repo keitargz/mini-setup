@@ -25,6 +25,6 @@ URxvt*highlightTextColor: #000000
 
 URxvt*scrollBar: false
 
-URxvt*font: xft:Noto Sans CJK JP:style=Regular:pixelsize=14,xft:Jetbrains Mono:style=Regular:pixelsize=14
+URxvt*font: xft:Jetbrains Mono:style=Regular:pixelsize=14,xft:Noto Sans CJK JP:style=Regular:pixelsize=14
 
 URxvt*iso14755: false
