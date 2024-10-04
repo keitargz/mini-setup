@@ -11,7 +11,6 @@ packages=(
     fcitx5
     fcitx5-mozc
     fish
-    fonts-jetbrains-mono
     gnome-themes-extra
     gnome-themes-extra-data
     neovim
@@ -19,6 +18,8 @@ packages=(
     rofi
     rxvt-unicode
     sxhkd
+    thunar
+    xinit
 )
 
 # install brave
@@ -55,3 +56,5 @@ cp -rf ./config/* ~/.config/
 cp -rf ./home/* ~/
 cp -rf ./home/.* ~/
 
+# copies greetd config
+sudo cp -rf ./greetd/* /etc/greetd/
