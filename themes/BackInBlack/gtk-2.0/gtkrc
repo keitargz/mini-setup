@@ -1,0 +1,55 @@
+# GTK2 Theme for High Contrast (White & Black)
+
+gtk-color-scheme = "fg_color:#FFFFFF\nbg_color:#000000\nbase_color:#000000\ntext_color:#FFFFFF\nselected_bg_color:#FFFFFF\nselected_fg_color:#000000\ntooltip_bg_color:#FFFFFF\ntooltip_fg_color:#000000"
+
+style "default"
+{
+    fg[NORMAL] = @fg_color
+    bg[NORMAL] = @bg_color
+
+    fg[PRELIGHT] = @fg_color
+    bg[PRELIGHT] = @bg_color
+
+    fg[ACTIVE] = @fg_color
+    bg[ACTIVE] = @bg_color
+
+    fg[SELECTED] = @selected_fg_color
+    bg[SELECTED] = @selected_bg_color
+
+    fg[INSENSITIVE] = shade(0.5, @fg_color)
+    bg[INSENSITIVE] = shade(0.5, @bg_color)
+
+    base[NORMAL] = @base_color
+    text[NORMAL] = @text_color
+
+    base[SELECTED] = @selected_bg_color
+    text[SELECTED] = @selected_fg_color
+}
+
+class "GtkWidget" style "default"
+
+# Button styles
+style "button"
+{
+    fg[NORMAL] = @fg_color
+    bg[NORMAL] = @bg_color
+}
+class "GtkButton" style "button"
+
+# Entry styles (for text input)
+style "entry"
+{
+    base[NORMAL] = @base_color
+    text[NORMAL] = @text_color
+}
+class "GtkEntry" style "entry"
+class "GtkTextView" style "entry"
+
+# Tooltip style
+style "tooltip"
+{
+    bg[NORMAL] = @tooltip_bg_color
+    fg[NORMAL] = @tooltip_fg_color
+}
+widget "gtk-tooltip*" style "tooltip"
+

@@ -1,0 +1,30 @@
+configuration {
+	show-icons: true;
+	display-drun: "";
+	disable-history: false;
+	icon-theme: "Numix-Circle";
+}
+
+* {
+	background-color: #000000;
+	text-color: #FFFFFF;
+	padding: 2px;
+}
+
+#window {
+	border: 1px;
+	border-color: #808080;
+}
+
+#listview {
+	background-color: #000000;
+}
+
+#element.selected {
+	border: 1px;
+	border-color: #808080;
+}
+
+#element-icon {
+	border: none;
+}
