@@ -11,9 +11,13 @@ packages=(
     fcitx5
     fcitx5-mozc
     fish
+    fonts-noto-cjk
+    fonts-jetbrains-mono
     gnome-themes-extra
     gnome-themes-extra-data
     neovim
+    pavucontrol
+    pipewire
     powerline
     rofi
     rxvt-unicode
@@ -51,9 +55,9 @@ sudo sed -ie s/required/sufficient/g /etc/pam.d/chsh
 chsh -s /usr/bin/fish
 
 # copies config
-mkdir ~/.config
+
+mkdir -p ~/.config
 cp -rf ./config/* ~/.config/
-cp -rf ./home/* ~/
 cp -rf ./home/.* ~/
 
 # copies greetd config
