@@ -11,6 +11,8 @@ packages=(
     fcitx5-mozc
     fish
     fonts-jetbrains-mono
+    gnome-themes-extra
+    gnome-themes-extra-data
     neovim
     powerline
     rofi
@@ -53,7 +55,4 @@ mkdir ~/.config
 cp -rf ./config/* ~/.config/
 cp -rf ./home/* ~/
 cp -rf ./home/.* ~/
-
-# themes copy
-sudo cp -rf ./themes/* /usr/share/themes/
 
