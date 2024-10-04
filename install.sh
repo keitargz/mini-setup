@@ -5,6 +5,7 @@ set -e
 # install packages
 packages=(
     alsa-utils
+    brave-browser
     bspwm
     brightnessctl
     fcitx5
@@ -18,15 +19,11 @@ packages=(
     rofi
     rxvt-unicode
     sxhkd
-    vivaldi-stable
 )
-sudo apt install wget gpg
 
-# vivaldi repo setting
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor > packages.vivaldi.gpg
-sudo install -o root -g root -m 644 packages.vivaldi.gpg /etc/apt/trusted.gpg.d
-sudo sh -c 'echo "deb [arch=amd64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.vivaldi.gpg] https://repo.vivaldi.com/archive/deb stable main" > /etc/apt/sources.list.d/vivaldi.list' 
-rm -f packages.vivaldi.gpg
+# install brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 # update / upgrade packages
 sudo apt update && sudo apt upgrade -y
