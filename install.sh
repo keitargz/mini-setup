@@ -5,16 +5,16 @@ set -e
 # install packages
 packages=(
     alsa-utils
+    brightnessctl
     brave-browser
     bspwm
-    fcitx5
-    fcitx5-mozc
+    fcitx
+    fcitx-mozc
     fish
     fonts-noto-cjk
     fonts-jetbrains-mono
     gnome-themes-extra
     gnome-themes-extra-data
-    ligjt
     lxappearance
     neovim
     numix-icon-theme-circle
@@ -59,8 +59,10 @@ echo -e 'QT_QPA_PLATFORMTHEME=qt5ct' | sudo tee -a /etc/environment
 sudo sed -ie s/required/sufficient/g /etc/pam.d/chsh
 chsh -s /usr/bin/fish
 
-# copies config
+# settings brightnessctl
+sudo chmod +s $(which brightnessctl)
 
+# copies config
 mkdir -p ~/.config
 cp -rf ./config/* ~/.config/
 cp -rf ./home/.* ~/
