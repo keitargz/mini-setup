@@ -4,6 +4,7 @@ set -e
 
 # install packages
 packages=(
+    alacritty
     alsa-utils
     brightnessctl
     brave-browser
@@ -24,7 +25,6 @@ packages=(
     qt5-gtk2-platformtheme
     qt5ct
     rofi
-    rxvt-unicode
     sxhkd
     thunar
     xbattbar

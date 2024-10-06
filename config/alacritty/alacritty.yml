@@ -1,0 +1,53 @@
+window:
+  dynamic_title: true
+  decorations: full
+  transparency: 0.0
+
+font:
+  normal:
+    family: JetBrains Mono
+  bold:
+    family: JetBrains Mono
+  italic:
+    family: JetBrains Mono
+  size: 6.0
+  offset:
+    x: 0
+    y: 0
+
+  fallback:
+    - family: Noto Sans Mono CJK JP
+
+colors:
+  primary:
+    background: "#000000"
+    foreground: "#c0c0c0"
+  normal:
+    black:   "#000000"
+    red:     "#ff0000"
+    green:   "#00ff00"
+    yellow:  "#ffff00"
+    blue:    "#0000ff"
+    magenta: "#ff00ff"
+    cyan:    "#00ffff"
+    white:   "#c0c0c0"
+  bright:
+    black:   "#808080"
+    red:     "#ff0000"
+    green:   "#00ff00"
+    yellow:  "#ffff00"
+    blue:    "#0000ff"
+    magenta: "#ff00ff"
+    cyan:    "#00ffff"
+    white:   "#ffffff"
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+mouse:
+  enabled: true
