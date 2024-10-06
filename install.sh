@@ -7,7 +7,6 @@ packages=(
     alsa-utils
     brave-browser
     bspwm
-    brightnessctl
     fcitx5
     fcitx5-mozc
     fish
@@ -15,7 +14,7 @@ packages=(
     fonts-jetbrains-mono
     gnome-themes-extra
     gnome-themes-extra-data
-    greetd
+    ligjt
     lxappearance
     neovim
     numix-icon-theme-circle
@@ -50,14 +49,11 @@ done
 # langage settings
 echo -e 'LANGUAGE=ja_JP.UTF-8\nLANG=ja_JP.UTF-8\nLC_ALL=ja_JP.UTF-8' | sudo tee -a /etc/environment
 
-# fcitx5 settings
+# fcitx settings
 echo -e 'GTK_IM_MODULE="fcitx"\nQT_IM_MODULE="fcitx"\nXMODIFIERS=@im=fcitx\nGLFW_IM_MODULE=ibus' | sudo tee -a /etc/environment
 
 # qt5ct settings
 echo -e 'QT_QPA_PLATFORMTHEME=qt5ct' | sudo tee -a /etc/environment
-
-# allow execute brightnessctl without root
-sudo chmod +s $(which brightnessctl)
 
 # settings fish
 sudo sed -ie s/required/sufficient/g /etc/pam.d/chsh
@@ -68,6 +64,3 @@ chsh -s /usr/bin/fish
 mkdir -p ~/.config
 cp -rf ./config/* ~/.config/
 cp -rf ./home/.* ~/
-
-# copies greetd config
-sudo cp -rf ./greetd/* /etc/greetd/
