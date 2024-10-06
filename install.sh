@@ -56,8 +56,7 @@ echo -e 'GTK_IM_MODULE="fcitx"\nQT_IM_MODULE="fcitx"\nXMODIFIERS=@im=fcitx\nGLFW
 echo -e 'QT_QPA_PLATFORMTHEME=qt5ct' | sudo tee -a /etc/environment
 
 # settings fish
-sudo sed -ie s/required/sufficient/g /etc/pam.d/chsh
-chsh -s /usr/bin/fish
+sudo usermod -s /usr/bin/fish $(whoami)
 
 # settings brightnessctl
 sudo chmod +s $(which brightnessctl)
