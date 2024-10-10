@@ -65,3 +65,6 @@ sudo chmod +s $(which brightnessctl)
 mkdir -p ~/.config
 cp -rf ./config/* ~/.config/
 cp -rf ./home/.* ~/
+
+# autopurge
+sudo apt autopurge -y
